@@ -1,0 +1,82 @@
+# This is a sample file for a manifest.yml manifest backend.
+# Read more about the manifest format here: https:/manifest.build/docs
+
+name: MV Playgrounds
+entities:
+  ProdutosHomepage:
+    nameSingular: Produto
+    properties:
+      - {
+          name: foto,
+          type: image,
+          options:
+            {
+              sizes:
+                { large: { width: 1200 } },
+            },
+        }
+      - titulo
+      - { name: descricao, type: text }
+
+    policies:
+      read:
+        - access: public
+  
+  Produto:
+    nameSingular: Produto
+    properties:
+      - { name: foto 1, type: image }
+      - { name: foto 2, type: image }
+      - { name: foto 3, type: image }
+      - { name: foto 4, type: image }
+      - titulo
+      - { name: descricao, type: text }
+    policies:
+      read:
+        - access: public
+  
+  Clientes:
+    nameSingular: Cliente
+    properties:
+      - {
+          name: foto,
+          type: image,
+          options:
+            {
+              sizes:
+                { large: { width: 800 } },
+            },
+        }
+      - { name: cliente, type: text }
+    policies:
+      read:
+        - access: public
+
+  ProdutosRelacionados:
+    nameSingular: Produto Relacionado
+    properties:
+      - {
+          name: foto,
+          type: image,
+          options:
+            {
+              sizes:
+                { large: { width: 1200 } },
+            },
+        }
+      - titulo
+      - { name: descricao, type: text }
+    policies:
+      read:
+        - access: public
+  
+  Homepage:
+    nameSingular: Home content
+    single: true
+    properties:
+      - title
+      - { name: description, type: richText }
+      - { name: cover, type: image }
+    policies:
+      read:
+        - access: public
