@@ -2,7 +2,7 @@ import { manifest } from '@/app/lib/manifest';
 import Image from 'next/image';
 
 export async function Clients() {
-  const clients = await manifest.from("clientes").find();
+  const clients = await manifest.from("clients").find();
 
   return (
     <section className="w-full h-auto flex flex-col justify-center items-center">

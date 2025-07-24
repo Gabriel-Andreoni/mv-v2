@@ -3,8 +3,8 @@
 
 name: MV Playgrounds
 entities:
-  ProdutosHomepage:
-    nameSingular: Produto
+  produtos_homepage:
+    nameSingular: produtos_homepage
     properties:
       - {
           name: foto,
@@ -22,20 +22,53 @@ entities:
       read:
         - access: public
   
-  Produto:
-    nameSingular: Produto
+  produto:
+    nameSingular: produto
     properties:
-      - { name: foto 1, type: image }
-      - { name: foto 2, type: image }
-      - { name: foto 3, type: image }
-      - { name: foto 4, type: image }
+      - {
+          name: foto 1,
+          type: image,
+          options:
+            {
+              sizes:
+                { large: { width: 1200 } },
+            },
+        }
+      - {
+          name: foto 2,
+          type: image,
+          options:
+            {
+              sizes:
+                { large: { width: 1200 } },
+            },
+        }
+      - {
+          name: foto 3,
+          type: image,
+          options:
+            {
+              sizes:
+                { large: { width: 1200 } },
+            },
+        }
+      - {
+          name: foto 4,
+          type: image,
+          options:
+            {
+              sizes:
+                { large: { width: 1200 } },
+            },
+        }
       - titulo
       - { name: descricao, type: text }
+      
     policies:
       read:
         - access: public
   
-  Clientes:
+  clients:
     nameSingular: Cliente
     properties:
       - {
@@ -52,11 +85,38 @@ entities:
       read:
         - access: public
 
-  ProdutosRelacionados:
-    nameSingular: Produto Relacionado
+  produtos_relacionados:
+    nameSingular: produtos_Relacionados
     properties:
       - {
-          name: foto,
+          name: foto_1,
+          type: image,
+          options:
+            {
+              sizes:
+                { large: { width: 1200 } },
+            },
+        }
+      - {
+          name: foto_2,
+          type: image,
+          options:
+            {
+              sizes:
+                { large: { width: 1200 } },
+            },
+        }
+      - {
+          name: foto_3,
+          type: image,
+          options:
+            {
+              sizes:
+                { large: { width: 1200 } },
+            },
+        }
+      - {
+          name: foto_4,
           type: image,
           options:
             {
@@ -66,6 +126,7 @@ entities:
         }
       - titulo
       - { name: descricao, type: text }
+      
     policies:
       read:
         - access: public

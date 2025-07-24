@@ -23,7 +23,7 @@ const nextConfig: NextConfig = {
         protocol: 'http',
         hostname: 'localhost',
         port: "1111",
-        pathname: "/storage/produtos-relacionados/**"
+        pathname: "/storage/produtos_relacionados/**"
       },
     ]
   }

@@ -8,7 +8,9 @@ import PlaygroundBanner from './images/product-home-banner.jpg';
 import { manifest } from "../lib/manifest";
 
 export default async function Playgrounds() {
-    const produtosRelacionados = await manifest.from("produtos-relacionados").find()
+    const produtosRelacionados = await manifest.from("produtos_relacionados").find()
+
+    console.log(produtosRelacionados);
     return (
         <>
             <Menu />
@@ -60,12 +62,12 @@ export default async function Playgrounds() {
                             <ProductCard
                                 key={pR.id}
                                 alt={pR.titulo}
-                                image={pR.foto.large}
+                                image={pR.foto_1.large}
                                 title={pR.titulo}
                                 description={pR.descricao}
                                 width={500}
                                 height={500}
-                                link={"#"}
+                                link={`/product/${pR.id}`}
                             />
                         )
                     })}

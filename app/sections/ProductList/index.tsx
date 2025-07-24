@@ -2,7 +2,7 @@ import { ProductCard } from "@/app/componentes/ProductCard";
 import { manifest } from "@/app/lib/manifest";
 
 export async function ProductList() {
-  const produtosHomePage = await manifest.from("produtos-homepages").find();
+  const produtosHomePage = await manifest.from("produtos_homepages").find();
 
   return (
     <section className="w-full min-h-auto px-[6em] bg-[#a52a2a]">
